@@ -1,0 +1,449 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+:root {
+  --color-primary: #6c9bcf;
+  --color-danger: #ff0060;
+  --color-success: #1b9c85;
+  --color-warning: #f7d060;
+  --color-white: #ffffff;
+  --color-info-dark: #7d8da1;
+  --color-dark: #363949;
+  --color-light: rgba(132, 139, 200, 0.18);
+  --color-dark-variant: #677483;
+  --color-background: #f2efe9;
+  --color-title: #4e99e9;
+
+  --card-border-radius: 2rem;
+  --border-radius-1: 0.4rem;
+  --border-radius-2: 1.2rem;
+
+  --card-padding: 1.8rem;
+  --padding-1: 1.2rem;
+
+  --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+.dark-mode-variables {
+  --color-title: #4e99e9;
+  --color-background: #181a1e;
+  --color-white: #202528;
+  --color-dark: #edeffd;
+  --color-dark-variant: #a3bdcc;
+  --color-light: rgba(0, 0, 0, 0.4);
+  --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--color-background) !important;
+  transition: .5s linear;
+}
+
+/* ======HEADER======== */
+
+/*Header top */
+
+header .menu-top-bar-right li:not(li:last-child) {
+  position: relative;
+  padding: 0 16px;
+}
+
+header .menu-top-bar-right li:last-child {
+  padding-left: 8px;
+}
+
+header .menu-top-bar-right li:not(li:last-child)::before {
+  position: absolute;
+  right: 0;
+  top: 25%;
+  content: "";
+  width: 1px;
+  height: 12px;
+  background-color: var(--color-info-dark);
+}
+
+header .menu-top-bar-left li:hover a,
+header .menu-top-bar-right li:hover a {
+  color: var(--color-dark);
+}
+
+header .header-top a {
+  text-decoration: none;
+  color: var(--color-info-dark);
+}
+
+header .header-bottom svg {
+  max-width: 125px;
+  cursor: pointer;
+}
+
+header .header-bottom .logo path {
+  fill: var(--color-dark);
+}
+
+header .menu-main a {
+  margin: 0 20px;
+  text-decoration: none;
+  color: var(--color-dark);
+  font-size: 16px;
+  font-weight: 600;
+  transition: .2s linear;
+}
+
+header .menu-main a:hover {
+  color: var(--color-title);
+}
+
+/*Search header bottom */
+
+header .search {
+  display: inline-block;
+  position: relative;
+  margin: 0 16px;
+}
+
+header .search input[type="text"] {
+  width: 200px;
+  padding: 8px 10px;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header .search button[type="submit"] {
+  background-color: #4e99e9;
+  border: none;
+  color: var(--color-white);
+  cursor: pointer;
+  padding: 8px 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: 0.9s ease;
+}
+
+header .search button[type="submit"]:hover {
+  transform: scale(1.1);
+  color: rgb(255, 255, 255);
+  background-color: blue;
+}
+
+/*Toggle Dark Mode */
+
+header .switch-name {
+  --dark-sky: #5050e5;
+  --moon: #ffd365;
+  --light-sky: #35d5e5;
+  --sun: #ffed89;
+  display: inline-block;
+  position: relative;
+  border-radius: 5em;
+  cursor: pointer;
+  width: 80px;
+  height: 37px;
+  overflow: hidden;
+  transition: all 0.5s;
+  align-items: center;
+}
+
+header .switch-name .back {
+  background-color: var(--light-sky);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  transition: 0.5s ease-in-out;
+}
+
+header .switch-name .checkbox {
+  opacity: 0;
+}
+
+header .switch-name .checkbox:checked ~ .back {
+  background-color: var(--dark-sky);
+}
+
+header .switch-name .checkbox:checked ~ .sun {
+  transform: translate(100%) rotate(180deg);
+  opacity: 0;
+}
+
+header .switch-name .checkbox:checked ~ .moon {
+  transform: translate(149%) rotate(360deg);
+  opacity: 1;
+}
+
+header .switch-name .sun {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  padding: 0.4em;
+  fill: var(--sun);
+  transition: 0.5s;
+}
+
+header .switch-name .moon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  padding: 0.4em;
+  fill: var(--moon);
+  transition: 0.5s;
+  opacity: 0;
+}
+
+header .btn-toggle-dark-mode {
+  height: 37px;
+  margin: 0 16px;
+}
+
+/*Menu bottom icons*/
+
+header .menu-bottom-icons {
+  margin: 0 16px;
+}
+  
+header .menu-bottom-icons i {
+  position: relative;
+  font-size: 24px;
+  color: var(--color-dark);
+}
+
+header .menu-bottom-icons li:first-child {
+  margin-right: 28px;
+}
+
+/*Menu icon cart*/
+
+header .cart {
+  position: relative;
+}
+
+header .cart .count-cart{
+  position: absolute;
+  bottom: 4px;
+  right: -4px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--color-title);
+  color: #ffffff;
+  text-align: center;
+  line-height: 16px;
+  font-size: 12px;
+}
+
+header .total-cart {
+  font-weight: 800;
+  font-size: 16px;
+}
+
+/*Menu bottom tooltip*/
+
+.uiverse {
+  position: relative;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #ffffff;
+  color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #ffffff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.uiverse:hover .tooltip {
+  top: -35px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+svg:hover span,
+svg:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.uiverse:hover .tooltip,
+.uiverse:hover .tooltip::before {
+  background: linear-gradient(320deg, rgb(3, 77, 146), rgb(0, 60, 255));
+  color: #ffffff;
+}
+
+/*Btn Sign In*/
+
+header .SignUp {
+  margin-left: 12px;
+}
+
+.box {
+  width: 100px;
+  height: 37px;
+  float: left;
+  transition: .5s linear;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  text-align: center;
+  line-height: 37px;
+  margin: 0 5px;
+  background: transparent;
+  font-weight: 900;
+}
+
+.box:before {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  border-bottom: 4px solid transparent;
+  border-left: 4px solid transparent;
+  box-sizing: border-box;
+  transform: translateX(100%);
+}
+
+.box:after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-top: 4px solid transparent;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+  transform: translateX(-100%);
+}
+
+.box:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.box:hover:before {
+  border-color: var(--color-title);
+  height: 100%;
+  transform: translateX(0);
+  transition: .3s transform linear, .3s height linear .3s;
+}
+
+.box:hover:after {
+  border-color: var(--color-title);
+  height: 100%;
+  transform: translateX(0);
+  transition: .3s transform linear, .3s height linear .5s;
+}
+
+button {
+  color: var(--color-dark);
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: transparent;
+}
+
+/*Btn Sign Up*/
+.button {
+  position: relative;
+  width: 100px;
+  height: 37px;
+  background-color: var(--color-background);
+  display: flex;
+  align-items: center;
+  color: var(--color-dark);
+  font-size: 14px;
+  font-weight: bold;
+  flex-direction: column;
+  justify-content: center;
+  border: none;
+  padding: 12px;
+  gap: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  left: -4px;
+  top: -1px;
+  margin: auto;
+  width: 108px;
+  height: 46px;
+  border-radius: 10px;
+  background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100% );
+  z-index: -10;
+  pointer-events: none;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.button::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100% );
+  transform: translate3d(0, 0, 0) scale(0.95);
+  filter: blur(12px);
+}
+
+.button:hover::after {
+  filter: blur(12px);
+}
+
+.button:hover::before {
+  transform: rotate(-180deg);
+}
+
+.button:active::before {
+  scale: 0.7;
+}
+
+
+
