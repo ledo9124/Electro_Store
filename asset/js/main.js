@@ -9,7 +9,6 @@ btnDarkMode.onclick = function() {
 const slideShow = document.querySelector('.slide-show .list-items');
 const slideListItems = document.querySelectorAll('.slide-show .item');
 const dots = document.querySelectorAll('.slide-show .dots li');
-console.log(slideShow , slideListItems , dots);
 
 let activeSlide = 0;
 let lengthSlide = slideListItems.length - 1;
@@ -47,4 +46,31 @@ dots.forEach((li , key) => {
         reloadSlider();
     })
 });
+
+//Slide Brand
+const slideBrand = document.querySelector('.brand .list-brands');
+const slideListBrands = document.querySelectorAll('.brand .list-brands .item');
+const brandNextPver = document.querySelectorAll('.brand .btn-next-pver .but');
+
+let activeBrand = 0;
+let lengthBrand = slideListBrands.length - 1;
+
+brandNextPver[0].onclick = function() {
+    activeBrand--;
+    slideBrand.prepend(slideListBrands[activeBrand + 1]);
+    reloadBrand();
+};
+
+brandNextPver[1].onclick = function() {
+    activeBrand++;
+    slideBrand.appendChild(slideListBrands[activeBrand - 1]);
+    reloadBrand();
+};
+
+function reloadBrand() {
+    activeBrand = activeBrand > lengthBrand ? 0 : activeBrand < 0 ? lengthBrand : activeBrand;
+
+    let checkLeft = slideListBrands[activeBrand].offsetLeft;
+    slideBrand.style.left = -259.8 + 'px';
+};
 
