@@ -139,3 +139,101 @@ document.onscroll = function () {
     header.classList.remove("toFixed");
   }
 };
+
+// Shop page view list product
+const shopPageListProducts = document.querySelectorAll(
+  ".shop-page .shop-list-products .item"
+);
+
+if (shopPageListProducts.length > 0) {
+  if (shopPageListProducts.length > 20) {
+    shopPageListProducts.forEach((product, index) => {
+      if (index + 1 > 20) {
+        product.style.display = "none";
+      }
+    });
+  }
+
+  let countTable = shopPageListProducts.length / 20;
+  const woocommerceResultCount = document.querySelectorAll(
+    ".shop-page .woocommerce-result-count"
+  );
+
+  woocommerceResultCount[0].innerHTML = `Showing all ${shopPageListProducts.length} results`;
+  if (countTable > 1) {
+    woocommerceResultCount[1].innerHTML = `Showing 1-20 of ${shopPageListProducts.length} results`;
+  } else {
+    woocommerceResultCount[1].innerHTML = `Showing all ${shopPageListProducts.length} results`;
+  }
+
+  const woocommerceQuantity = document.querySelector(
+    ".shop-page .woocommerce-quantity"
+  );
+  woocommerceQuantity.innerHTML = `1 of ${Math.ceil(countTable)}`;
+
+  const woocommercePaginationBottom = document.querySelector(
+    ".shop-page .woocommerce-pagination-bottom"
+  );
+
+  let woocommercePaginationBottomHtml = "";
+  for (let index = 0; index < countTable; ) {
+    woocommercePaginationBottomHtml += `
+      <div class="btn-pagination ${index == 0 ? "active" : ""} border">${
+      index + 1
+    }</div>
+    `;
+    index++;
+  }
+  woocommercePaginationBottom.innerHTML = woocommercePaginationBottomHtml;
+
+  let currentActive = 0;
+
+  const woocommerceBtnNextPver = document.querySelectorAll(
+    ".shop-page .woocommerce-pagination .btn-next-pver i"
+  );
+
+  const woocommercePaginationBottomBtn = document.querySelectorAll(
+    ".shop-page .woocommerce-pagination-bottom .btn-pagination"
+  );
+
+  woocommerceBtnNextPver[0].onclick = function () {
+    currentActive--;
+    if (currentActive < 0) {
+      currentActive = Math.ceil(countTable)-1;
+    }
+    reloadProduct();
+  };
+
+  woocommerceBtnNextPver[1].onclick = function () {
+    currentActive++;
+    if (currentActive > Math.ceil(countTable)-1) {
+      currentActive = 0;
+    }
+    reloadProduct();
+  };
+
+  woocommercePaginationBottomBtn.forEach((btn , index) => {
+    btn.onclick = function () {
+      currentActive = index;
+      reloadProduct();
+    };
+  });
+
+  function reloadProduct() {
+    woocommerceQuantity.innerHTML = `${currentActive + 1} of ${Math.ceil(
+      countTable
+    )}`;
+
+    let woocommercePaginationBottomBtnActive = document.querySelector(
+      ".shop-page .woocommerce-pagination-bottom .btn-pagination.active"
+    ).classList.remove('active');
+    woocommercePaginationBottomBtn[currentActive].classList.add('active');
+
+    shopPageListProducts.forEach((item, index) => {
+      item.style.display = "none";
+      if (index > currentActive * 20 -1 && index <= currentActive * 20 + 19) {
+        item.style.display = "block";
+      };
+    });
+  }
+}

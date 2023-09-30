@@ -32,7 +32,7 @@
   --color-white: #202528;
   --color-dark: #edeffd;
   --color-dark-variant: #a3bdcc;
-  --color-light: #eaeaea;
+  --color-light: #555;
   --color-linear: #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4,
     #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1;
 
@@ -1774,6 +1774,33 @@ footer .copyright-bar {
   margin: 0;
 }
 
+.shop-page .shop-latest-list-products .item {
+  display: flex;
+  margin: 20px 0;
+}
+
+.shop-page .shop-latest-list-products .item .item-img {
+  min-width: 75px;
+  width: 75px;
+  height: 75px;
+  margin-right: 8px;
+}
+
+.shop-page .shop-latest-list-products .item-img img {
+  object-fit: cover;
+}
+
+.shop-page .shop-latest-list-products .item .item-name {
+  color: var(--color-dark);
+  font-size: 16px;
+}
+
+.shop-page .shop-latest-list-products .item .item-price {
+  color: var(--color-dark);
+  font-size: 16px;
+  font-weight: bold;
+}
+
 /* Shop content*/
 
 .shop-content .shop-content-header h2{
@@ -1868,6 +1895,10 @@ footer .copyright-bar {
 
 /* Shop list products*/
 
+.shop-page .shop-list-products {
+  max-height: 1600px;
+}
+
 .shop-page .shop-products {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -1941,7 +1972,7 @@ footer .copyright-bar {
 .shop-page .shop-products .dots-menu {
   position: absolute;
   right: 16px;
-  bottom: 62px;
+  bottom: 68px;
 }
 
 .shop-page .shop-products .nav-dots-item i {
@@ -2004,4 +2035,44 @@ footer .copyright-bar {
   background-color: var(--color-title);
 }
 
+/* Shop widget bar bottom*/
 
+.shop-page .shop-widget-bar-bottom {
+  padding: 14px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.shop-page .shop-widget-bar-bottom .woocommerce-result-count {
+  font-size: 16px;
+  color: var(--color-dark-variant);
+}
+
+.shop-page .shop-widget-bar-bottom .woocommerce-pagination-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.shop-page .woocommerce-pagination-bottom .btn-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-dark);
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin: 0 4px;
+  cursor: pointer;
+  transition: .3s ease-in;
+}
+
+.shop-page .woocommerce-pagination-bottom .btn-pagination.active {
+  background-color: var(--color-title);
+  cursor: default;
+}
+
+.shop-page .woocommerce-pagination-bottom .btn-pagination:hover {
+  background-color: var(--color-title);
+}
