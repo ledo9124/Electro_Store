@@ -178,7 +178,7 @@
         </div>
       </header>
 
-      <div class="product-page">
+      <div class="shop-page">
         <div class="container">
           <div class="shop-breadcrumb">
             <nav
@@ -192,15 +192,12 @@
             >
               <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item"><a href="#">Shop</a></li>
-                <li class="breadcrumb-item active" aria-current="page">
-                  Product
-                </li>
+                <li class="breadcrumb-item active" aria-current="page">Shop</li>
               </ol>
             </nav>
           </div>
 
-          <div class="product-content-inner row g-5">
+          <div class="shop-content-inner row g-5">
             <div class="col-3 shop-sidebar">
               <div class="shop-categories">
                 <div class="d-flex align-items-center title">
@@ -217,6 +214,105 @@
                   <li><a href="#">Car & Motorbike</a></li>
                   <li><a href="#">Accessories</a></li>
                 </ul>
+              </div>
+
+              <div class="shop-widget-filter">
+                <div class="shop-filter-title border-bottom">
+                  <h3>Filters</h3>
+                </div>
+
+                <div class="shop-filter bands border-bottom pb-4">
+                  <h3 class="widget-title">Brands</h3>
+                  <form action="" class="shop-filter-form bands">
+                    <div class="item">
+                      <input type="checkbox" id="band1" name="band" /><label
+                        for="band1"
+                        >Apple</label
+                      >
+                    </div>
+                    <div class="item">
+                      <input type="checkbox" id="band2" name="band" /><label
+                        for="band2"
+                        >HTC</label
+                      >
+                    </div>
+                    <div class="item">
+                      <input type="checkbox" id="band3" name="band" /><label
+                        for="band3"
+                        >LG</label
+                      >
+                    </div>
+                    <div class="item">
+                      <input type="checkbox" id="band4" name="band" /><label
+                        for="band4"
+                        >Micromax</label
+                      >
+                    </div>
+                    <div class="item">
+                      <input type="checkbox" id="band5" name="band" /><label
+                        for="band5"
+                        >Microsoft</label
+                      >
+                    </div>
+                    <div class="item">
+                      <input type="checkbox" id="band6" name="band" /><label
+                        for="band6"
+                        >Samsung</label
+                      >
+                    </div>
+                    <div class="item">
+                      <input type="checkbox" id="band7" name="band" /><label
+                        for="band7"
+                        >Xiaomi</label
+                      >
+                    </div>
+                  </form>
+                </div>
+
+                <div class="shop-filter color border-bottom pb-4">
+                  <h3 class="widget-title">Color</h3>
+                  <form action="" class="shop-filter-form color">
+                    <div class="item">
+                      <input type="checkbox" id="color1" name="color" /><label
+                        for="color1"
+                        >Black</label
+                      >
+                    </div>
+                    <div class="item">
+                      <input type="checkbox" id="color2" name="color" /><label
+                        for="color2"
+                        >Black Leather</label
+                      >
+                    </div>
+                    <div class="item">
+                      <input type="checkbox" id="color3" name="color" /><label
+                        for="color3"
+                        >Gold</label
+                      >
+                    </div>
+                    <div class="item">
+                      <input type="checkbox" id="color4" name="color" /><label
+                        for="color4"
+                        >White</label
+                      >
+                    </div>
+                    <div class="item">
+                      <input type="checkbox" id="color5" name="color" /><label
+                        for="color5"
+                        >White with Gold</label
+                      >
+                    </div>
+                  </form>
+                </div>
+
+                <div class="shop-filter-price">
+                  <h3 class="widget-title">Price</h3>
+                  <form action="" class="shop-filter-form price">
+                    <input type="range" step="1" />
+                    <label for="">Price: $60 - $3,490</label>
+                    <button>Filter</button>
+                  </form>
+                </div>
               </div>
 
               <div class="shop-media-sidebar mt-4 mb-4">
@@ -324,307 +420,492 @@
               </div>
             </div>
 
-            <div class="col-9 product-sigle-wrapper">
-              <div class="row g-5 product-sigle-info">
-                <div class="col-5 product-img">
-                  <img src="./asset/image/product-smartphone-1.png" alt="" />
-                </div>
-
-                <div class="col-7 product-info">
-                  <div class="product-band">Headerphones</div>
-                  <div class="product-name">Smartphone 6S 32GB LTE</div>
-                  <div class="product-rating border-bottom pb-2">
-                    <div class="star-rating">
-                      <img src="./asset/image/star-rating.png" alt="" />
-                    </div>
-                    <a href="#reviews" class="review-rating-count"
-                      >( 2 customer reviews)</a
-                    >
-                  </div>
-                  <div class="product-action-btn">
-                    <a href="#">
-                      <i class="bi bi-heart"></i>
-                      <span>Wishlist</span>
-                    </a>
-                    <a href="#">
-                      <i class="bi bi-arrow-repeat"></i>
-                      <span>Compare</span>
-                    </a>
-                  </div>
-                  <div class="product-details-short">
-                    <ul>
-                      <li>Active noise cancellation for immersive sound</li>
-                      <li>
-                        Three sizes of soft, tapered silicone tips for a
-                        customisable fit
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="product-price">
-                    <p>$799.00</p>
-                  </div>
-                  <form action="" class="product-cart">
-                    <input type="number" value="1" />
-                    <div class="btn btn-success">
-                      Pay with
-                      <span> link </span>
-                      <svg
-                        class="InlineSVG LinkButton-arrow"
-                        focusable="false"
-                        width="21"
-                        height="14"
-                        viewBox="0 0 21 14"
-                        fill="none"
-                      >
-                        <path
-                          d="M14.5247 0.219442C14.2317 -0.0733252 13.7568 -0.0731212 13.4641 0.219898C13.1713 0.512917 13.1715 0.98779 13.4645 1.28056L18.5 6.5L19 7L18.5 7.75C18 8.5 13.4645 12.7194 13.4645 12.7194C13.1715 13.0122 13.1713 13.4871 13.4641 13.7801C13.7568 14.0731 14.2317 14.0733 14.5247 13.7806L20.7801 7.53056C20.9209 7.38989 21 7.19902 21 7C21 6.80098 20.9209 6.61011 20.7801 6.46944L14.5247 0.219442Z"
-                          fill="#1D3944"
-                        ></path>
-                        <path
-                          d="M14 4L4 4"
-                          stroke="#1D3944"
-                          stroke-width="1.5"
-                          stroke-linecap="round"
-                        ></path>
-                        <path
-                          d="M14 4V1"
-                          stroke="#1D3944"
-                          stroke-width="1.5"
-                          stroke-linecap="round"
-                        ></path>
-                        <path
-                          d="M14 13V10"
-                          stroke="#1D3944"
-                          stroke-width="1.5"
-                          stroke-linecap="round"
-                        ></path>
-                        <path
-                          d="M4 9.25C3.58579 9.25 3.25 9.58579 3.25 10C3.25 10.4142 3.58579 10.75 4 10.75V9.25ZM14 9.25H4V10.75H14V9.25Z"
-                          fill="#1D3944"
-                        ></path>
-                        <path
-                          d="M1.00007 6.25C0.585853 6.24996 0.250037 6.58572 0.25 6.99993C0.249963 7.41415 0.58572 7.74996 0.999934 7.75L1.00007 6.25ZM14.0001 6.25115L1.00007 6.25L0.999934 7.75L13.9999 7.75115L14.0001 6.25115Z"
-                          fill="#1D3944"
-                        ></path>
-                      </svg>
-                    </div>
-
-                    <p class="wc-stripe-payment-request-separator">— OR —</p>
-
-                    <a href="#" class="btn btn-warning">
-                      <i class="bi bi-cart-plus"></i>
-                      <span>Add to Cart</span>
-                    </a>
-                  </form>
-                </div>
+            <div class="col-9 shop-content">
+              <div class="shop-content-header d-flex justify-content-between">
+                <h2>Smart Phones & Tablets</h2>
+                <p class="woocommerce-result-count mb-0 align-self-center">
+                  <!-- Showing all 26 results -->
+                </p>
               </div>
 
-              <div class="product-tabs-wrapper">
-                <div class="tabs-title">
-                  <div id="reviews" class="tab-title-review">
-                    <a href="#"> Reviews </a>
-                  </div>
-                </div>
-                <div class="wc-tab-review">
-                  <div class="advanced-review row">
-                    <div class="col-6 base-rating">
-                      <div class="based-title">Based on 2 reviews</div>
+              <div class="shop-widget-bar-top">
+                <ul class="shop-view-switcher nav align-items-center">
+                  <li class="active">
+                    <i class="bi bi-grid-3x3-gap-fill"></i>
+                  </li>
+                  <li><ion-icon name="menu-outline"></ion-icon></li>
+                  <li><ion-icon name="list-outline"></ion-icon></li>
+                </ul>
 
-                      <div class="avg-rating">
-                        <span class="avg-rating-number">4.5</span>
-                        overall
-                      </div>
+                <form action="" class="woocommerce-ordering">
+                  <select name="orderby">
+                    <option value="menu_order" selected>Default sorting</option>
+                    <option value="popularity">Sort by popularity</option>
+                    <option value="rating">Sort by average rating</option>
+                    <option value="date">Sort by latest</option>
+                    <option value="price">Sort by price: low to high</option>
+                    <option value="price-desc">
+                      Sort by price: high to low
+                    </option>
+                  </select>
+                </form>
 
-                      <div class="rating-histogram">
-                        <div class="rating-bar">
-                          <div class="star-rating">
-                            <img
-                              class="img-fluid"
-                              src="./asset/image/star-rating-5s.png"
-                              alt=""
-                            />
-                          </div>
-                          <div class="rating-percentage-bar">
-                            <span class="rating-percentage"></span>
-                          </div>
-                          <div class="rating-count">5</div>
-                        </div>
-                        <div class="rating-bar">
-                          <div class="star-rating">
-                            <img
-                              class="img-fluid"
-                              src="./asset/image/star-rating-4s.png"
-                              alt=""
-                            />
-                          </div>
-                          <div class="rating-percentage-bar">
-                            <span class="rating-percentage"></span>
-                          </div>
-                          <div class="rating-count">4</div>
-                        </div>
-                        <div class="rating-bar">
-                          <div class="star-rating">
-                            <img
-                              class="img-fluid"
-                              src="./asset/image/star-rating-3s.png"
-                              alt=""
-                            />
-                          </div>
-                          <div class="rating-percentage-bar">
-                            <span class="rating-percentage"></span>
-                          </div>
-                          <div class="rating-count">3</div>
-                        </div>
-                        <div class="rating-bar">
-                          <div class="star-rating">
-                            <img
-                              class="img-fluid"
-                              src="./asset/image/star-rating-2s.png"
-                              alt=""
-                            />
-                          </div>
-                          <div class="rating-percentage-bar">
-                            <span class="rating-percentage"></span>
-                          </div>
-                          <div class="rating-count">2</div>
-                        </div>
-                        <div class="rating-bar">
-                          <div class="star-rating">
-                            <img
-                              class="img-fluid"
-                              src="./asset/image/star-rating-1s.png"
-                              alt=""
-                            />
-                          </div>
-                          <div class="rating-percentage-bar">
-                            <span class="rating-percentage"></span>
-                          </div>
-                          <div class="rating-count">1</div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="col-6 review-form">
-                      <div class="review-title">Add a review</div>
-
-                      <form action="" class="comment-form">
-                        <div class="comment-form-rating">
-                          <div class="title">Your Rating</div>
-
-                          <div class="rating">
-                            <input
-                              type="radio"
-                              id="star5"
-                              name="rating"
-                              value="5"
-                            />
-                            <label for="star5"></label>
-                            <input
-                              type="radio"
-                              id="star4"
-                              name="rating"
-                              value="4"
-                            />
-                            <label for="star4"></label>
-                            <input
-                              type="radio"
-                              id="star3"
-                              name="rating"
-                              value="3"
-                            />
-                            <label for="star3"></label>
-                            <input
-                              type="radio"
-                              id="star2"
-                              name="rating"
-                              value="2"
-                            />
-                            <label for="star2"></label>
-                            <input
-                              type="radio"
-                              id="star1"
-                              name="rating"
-                              value="1"
-                            />
-                            <label for="star1"></label>
-                          </div>
-
-                          <input type="hidden" name="star-rating" />
-                        </div>
-
-                        <div class="comment-form-comment">
-                          <div class="title">Your Review</div>
-
-                          <textarea
-                            name="comment"
-                            cols="45"
-                            rows="2"
-                            required="true"
-                          ></textarea>
-                        </div>
-
-                        <input type="submit" value="Add Review" />
-                      </form>
-                    </div>
+                <div class="woocommerce-pagination">
+                  <div class="btn-next-pver">
+                    <i class="bi bi-arrow-left-short"></i>
+                    <i class="bi bi-arrow-right-short"></i>
                   </div>
 
-                  <div class="comment-review">
-                    <div class="list-comments">
-                      <div class="item">
-                        <div class="star-rating">
-                          <img
-                            class="img-fluid"
-                            src="./asset/image/star-rating-4s.png"
-                            alt=""
-                          />
-                        </div>
-
-                        <div class="comment-text">
-                          Fusce vitae nibh mi. Integer posuere, libero et
-                          ullamcorper facilisis, enim eros tincidunt orci, eget
-                          vestibulum sapien nisi ut leo. Cras finibus vel est ut
-                          mollis. Donec luctus condimentum ante et euismod.
-                        </div>
-
-                        <div class="user-date">
-                          <div class="user-name">abubacker</div>
-                          -
-                          <div class="date">November 19, 2021</div>
-                        </div>
-                      </div>
-                      <div class="item">
-                        <div class="star-rating">
-                          <img
-                            class="img-fluid"
-                            src="./asset/image/star-rating-5s.png"
-                            alt=""
-                          />
-                        </div>
-
-                        <div class="comment-text">
-                          Fusce vitae nibh mi. Integer posuere, libero et
-                          ullamcorper facilisis, enim eros tincidunt orci, eget
-                          vestibulum sapien nisi ut leo. Cras finibus vel est ut
-                          mollis.
-                        </div>
-
-                        <div class="user-date">
-                          <div class="user-name">abubacker</div>
-                          -
-                          <div class="date">November 19, 2021</div>
-                        </div>
-                      </div>
-                    </div>
+                  <div class="woocommerce-quantity">
+                    <!-- 1 of 2 -->
                   </div>
                 </div>
               </div>
 
-              <section class="related-products">
-                <header class="title border-bottom">
-                  <h2>Related products</h2>
-                </header>
-
-                <div class="list-products">
+              <div class="shop-list-products border-bottom pb-4">
+                <div class="shop-products">
+                  <a href="#" class="item">
+                    <div class="category-name">Smartphone</div>
+                    <div class="item-name">
+                      Notebook White Spire V Nitro VN7-591G
+                    </div>
+                    <div class="item-img">
+                      <img
+                        class="img-fluid"
+                        src="./asset/image/product-smartphone-1.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="price-add-to-card">
+                      <div href="#" class="price">$159.00</div>
+                      <div href="#" class="add-to-cart">
+                        <i class="bi bi-cart-plus"></i>
+                      </div>
+                    </div>
+                    <div class="dots-menu">
+                      <div class="nav-dots-item">
+                        <i class="bi bi-heart" title="Wishlist"></i>
+                        <i class="bi bi-arrow-repeat" title="Compare"></i>
+                      </div>
+                      <ion-icon name="add-outline"></ion-icon>
+                    </div>
+                  </a>
+                  <a href="#" class="item">
+                    <div class="category-name">Smartphone</div>
+                    <div class="item-name">
+                      Notebook White Spire V Nitro VN7-591G
+                    </div>
+                    <div class="item-img">
+                      <img
+                        class="img-fluid"
+                        src="./asset/image/product-smartphone-1.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="price-add-to-card">
+                      <div href="#" class="price">$159.00</div>
+                      <div href="#" class="add-to-cart">
+                        <i class="bi bi-cart-plus"></i>
+                      </div>
+                    </div>
+                    <div class="dots-menu">
+                      <div class="nav-dots-item">
+                        <i class="bi bi-heart" title="Wishlist"></i>
+                        <i class="bi bi-arrow-repeat" title="Compare"></i>
+                      </div>
+                      <ion-icon name="add-outline"></ion-icon>
+                    </div>
+                  </a>
+                  <a href="#" class="item">
+                    <div class="category-name">Smartphone</div>
+                    <div class="item-name">
+                      Notebook White Spire V Nitro VN7-591G
+                    </div>
+                    <div class="item-img">
+                      <img
+                        class="img-fluid"
+                        src="./asset/image/product-smartphone-1.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="price-add-to-card">
+                      <div href="#" class="price">$159.00</div>
+                      <div href="#" class="add-to-cart">
+                        <i class="bi bi-cart-plus"></i>
+                      </div>
+                    </div>
+                    <div class="dots-menu">
+                      <div class="nav-dots-item">
+                        <i class="bi bi-heart" title="Wishlist"></i>
+                        <i class="bi bi-arrow-repeat" title="Compare"></i>
+                      </div>
+                      <ion-icon name="add-outline"></ion-icon>
+                    </div>
+                  </a>
+                  <a href="#" class="item">
+                    <div class="category-name">Smartphone</div>
+                    <div class="item-name">
+                      Notebook White Spire V Nitro VN7-591G
+                    </div>
+                    <div class="item-img">
+                      <img
+                        class="img-fluid"
+                        src="./asset/image/product-smartphone-1.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="price-add-to-card">
+                      <div href="#" class="price">$159.00</div>
+                      <div href="#" class="add-to-cart">
+                        <i class="bi bi-cart-plus"></i>
+                      </div>
+                    </div>
+                    <div class="dots-menu">
+                      <div class="nav-dots-item">
+                        <i class="bi bi-heart" title="Wishlist"></i>
+                        <i class="bi bi-arrow-repeat" title="Compare"></i>
+                      </div>
+                      <ion-icon name="add-outline"></ion-icon>
+                    </div>
+                  </a>
+                  <a href="#" class="item">
+                    <div class="category-name">Smartphone</div>
+                    <div class="item-name">
+                      Notebook White Spire V Nitro VN7-591G
+                    </div>
+                    <div class="item-img">
+                      <img
+                        class="img-fluid"
+                        src="./asset/image/product-smartphone-1.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="price-add-to-card">
+                      <div href="#" class="price">$159.00</div>
+                      <div href="#" class="add-to-cart">
+                        <i class="bi bi-cart-plus"></i>
+                      </div>
+                    </div>
+                    <div class="dots-menu">
+                      <div class="nav-dots-item">
+                        <i class="bi bi-heart" title="Wishlist"></i>
+                        <i class="bi bi-arrow-repeat" title="Compare"></i>
+                      </div>
+                      <ion-icon name="add-outline"></ion-icon>
+                    </div>
+                  </a>
+                  <a href="#" class="item">
+                    <div class="category-name">Smartphone</div>
+                    <div class="item-name">
+                      Notebook White Spire V Nitro VN7-591G
+                    </div>
+                    <div class="item-img">
+                      <img
+                        class="img-fluid"
+                        src="./asset/image/product-smartphone-1.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="price-add-to-card">
+                      <div href="#" class="price">$159.00</div>
+                      <div href="#" class="add-to-cart">
+                        <i class="bi bi-cart-plus"></i>
+                      </div>
+                    </div>
+                    <div class="dots-menu">
+                      <div class="nav-dots-item">
+                        <i class="bi bi-heart" title="Wishlist"></i>
+                        <i class="bi bi-arrow-repeat" title="Compare"></i>
+                      </div>
+                      <ion-icon name="add-outline"></ion-icon>
+                    </div>
+                  </a>
+                  <a href="#" class="item">
+                    <div class="category-name">Smartphone</div>
+                    <div class="item-name">
+                      Notebook White Spire V Nitro VN7-591G
+                    </div>
+                    <div class="item-img">
+                      <img
+                        class="img-fluid"
+                        src="./asset/image/product-smartphone-1.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="price-add-to-card">
+                      <div href="#" class="price">$159.00</div>
+                      <div href="#" class="add-to-cart">
+                        <i class="bi bi-cart-plus"></i>
+                      </div>
+                    </div>
+                    <div class="dots-menu">
+                      <div class="nav-dots-item">
+                        <i class="bi bi-heart" title="Wishlist"></i>
+                        <i class="bi bi-arrow-repeat" title="Compare"></i>
+                      </div>
+                      <ion-icon name="add-outline"></ion-icon>
+                    </div>
+                  </a>
+                  <a href="#" class="item">
+                    <div class="category-name">Smartphone</div>
+                    <div class="item-name">
+                      Notebook White Spire V Nitro VN7-591G
+                    </div>
+                    <div class="item-img">
+                      <img
+                        class="img-fluid"
+                        src="./asset/image/product-smartphone-1.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="price-add-to-card">
+                      <div href="#" class="price">$159.00</div>
+                      <div href="#" class="add-to-cart">
+                        <i class="bi bi-cart-plus"></i>
+                      </div>
+                    </div>
+                    <div class="dots-menu">
+                      <div class="nav-dots-item">
+                        <i class="bi bi-heart" title="Wishlist"></i>
+                        <i class="bi bi-arrow-repeat" title="Compare"></i>
+                      </div>
+                      <ion-icon name="add-outline"></ion-icon>
+                    </div>
+                  </a>
+                  <a href="#" class="item">
+                    <div class="category-name">Smartphone</div>
+                    <div class="item-name">
+                      Notebook White Spire V Nitro VN7-591G
+                    </div>
+                    <div class="item-img">
+                      <img
+                        class="img-fluid"
+                        src="./asset/image/product-smartphone-1.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="price-add-to-card">
+                      <div href="#" class="price">$159.00</div>
+                      <div href="#" class="add-to-cart">
+                        <i class="bi bi-cart-plus"></i>
+                      </div>
+                    </div>
+                    <div class="dots-menu">
+                      <div class="nav-dots-item">
+                        <i class="bi bi-heart" title="Wishlist"></i>
+                        <i class="bi bi-arrow-repeat" title="Compare"></i>
+                      </div>
+                      <ion-icon name="add-outline"></ion-icon>
+                    </div>
+                  </a>
+                  <a href="#" class="item">
+                    <div class="category-name">Smartphone</div>
+                    <div class="item-name">
+                      Notebook White Spire V Nitro VN7-591G
+                    </div>
+                    <div class="item-img">
+                      <img
+                        class="img-fluid"
+                        src="./asset/image/product-smartphone-1.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="price-add-to-card">
+                      <div href="#" class="price">$159.00</div>
+                      <div href="#" class="add-to-cart">
+                        <i class="bi bi-cart-plus"></i>
+                      </div>
+                    </div>
+                    <div class="dots-menu">
+                      <div class="nav-dots-item">
+                        <i class="bi bi-heart" title="Wishlist"></i>
+                        <i class="bi bi-arrow-repeat" title="Compare"></i>
+                      </div>
+                      <ion-icon name="add-outline"></ion-icon>
+                    </div>
+                  </a>
+                  <a href="#" class="item">
+                    <div class="category-name">Smartphone</div>
+                    <div class="item-name">
+                      Notebook White Spire V Nitro VN7-591G
+                    </div>
+                    <div class="item-img">
+                      <img
+                        class="img-fluid"
+                        src="./asset/image/product-smartphone-1.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="price-add-to-card">
+                      <div href="#" class="price">$159.00</div>
+                      <div href="#" class="add-to-cart">
+                        <i class="bi bi-cart-plus"></i>
+                      </div>
+                    </div>
+                    <div class="dots-menu">
+                      <div class="nav-dots-item">
+                        <i class="bi bi-heart" title="Wishlist"></i>
+                        <i class="bi bi-arrow-repeat" title="Compare"></i>
+                      </div>
+                      <ion-icon name="add-outline"></ion-icon>
+                    </div>
+                  </a>
+                  <a href="#" class="item">
+                    <div class="category-name">Smartphone</div>
+                    <div class="item-name">
+                      Notebook White Spire V Nitro VN7-591G
+                    </div>
+                    <div class="item-img">
+                      <img
+                        class="img-fluid"
+                        src="./asset/image/product-smartphone-1.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="price-add-to-card">
+                      <div href="#" class="price">$159.00</div>
+                      <div href="#" class="add-to-cart">
+                        <i class="bi bi-cart-plus"></i>
+                      </div>
+                    </div>
+                    <div class="dots-menu">
+                      <div class="nav-dots-item">
+                        <i class="bi bi-heart" title="Wishlist"></i>
+                        <i class="bi bi-arrow-repeat" title="Compare"></i>
+                      </div>
+                      <ion-icon name="add-outline"></ion-icon>
+                    </div>
+                  </a>
+                  <a href="#" class="item">
+                    <div class="category-name">Smartphone</div>
+                    <div class="item-name">
+                      Notebook White Spire V Nitro VN7-591G
+                    </div>
+                    <div class="item-img">
+                      <img
+                        class="img-fluid"
+                        src="./asset/image/product-smartphone-1.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="price-add-to-card">
+                      <div href="#" class="price">$159.00</div>
+                      <div href="#" class="add-to-cart">
+                        <i class="bi bi-cart-plus"></i>
+                      </div>
+                    </div>
+                    <div class="dots-menu">
+                      <div class="nav-dots-item">
+                        <i class="bi bi-heart" title="Wishlist"></i>
+                        <i class="bi bi-arrow-repeat" title="Compare"></i>
+                      </div>
+                      <ion-icon name="add-outline"></ion-icon>
+                    </div>
+                  </a>
+                  <a href="#" class="item">
+                    <div class="category-name">Smartphone</div>
+                    <div class="item-name">
+                      Notebook White Spire V Nitro VN7-591G
+                    </div>
+                    <div class="item-img">
+                      <img
+                        class="img-fluid"
+                        src="./asset/image/product-smartphone-1.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="price-add-to-card">
+                      <div href="#" class="price">$159.00</div>
+                      <div href="#" class="add-to-cart">
+                        <i class="bi bi-cart-plus"></i>
+                      </div>
+                    </div>
+                    <div class="dots-menu">
+                      <div class="nav-dots-item">
+                        <i class="bi bi-heart" title="Wishlist"></i>
+                        <i class="bi bi-arrow-repeat" title="Compare"></i>
+                      </div>
+                      <ion-icon name="add-outline"></ion-icon>
+                    </div>
+                  </a>
+                  <a href="#" class="item">
+                    <div class="category-name">Smartphone</div>
+                    <div class="item-name">
+                      Notebook White Spire V Nitro VN7-591G
+                    </div>
+                    <div class="item-img">
+                      <img
+                        class="img-fluid"
+                        src="./asset/image/product-smartphone-1.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="price-add-to-card">
+                      <div href="#" class="price">$159.00</div>
+                      <div href="#" class="add-to-cart">
+                        <i class="bi bi-cart-plus"></i>
+                      </div>
+                    </div>
+                    <div class="dots-menu">
+                      <div class="nav-dots-item">
+                        <i class="bi bi-heart" title="Wishlist"></i>
+                        <i class="bi bi-arrow-repeat" title="Compare"></i>
+                      </div>
+                      <ion-icon name="add-outline"></ion-icon>
+                    </div>
+                  </a>
+                  <a href="#" class="item">
+                    <div class="category-name">Smartphone</div>
+                    <div class="item-name">
+                      Notebook White Spire V Nitro VN7-591G
+                    </div>
+                    <div class="item-img">
+                      <img
+                        class="img-fluid"
+                        src="./asset/image/product-smartphone-1.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="price-add-to-card">
+                      <div href="#" class="price">$159.00</div>
+                      <div href="#" class="add-to-cart">
+                        <i class="bi bi-cart-plus"></i>
+                      </div>
+                    </div>
+                    <div class="dots-menu">
+                      <div class="nav-dots-item">
+                        <i class="bi bi-heart" title="Wishlist"></i>
+                        <i class="bi bi-arrow-repeat" title="Compare"></i>
+                      </div>
+                      <ion-icon name="add-outline"></ion-icon>
+                    </div>
+                  </a>
+                  <a href="#" class="item">
+                    <div class="category-name">Smartphone</div>
+                    <div class="item-name">
+                      Notebook White Spire V Nitro VN7-591G
+                    </div>
+                    <div class="item-img">
+                      <img
+                        class="img-fluid"
+                        src="./asset/image/product-smartphone-1.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="price-add-to-card">
+                      <div href="#" class="price">$159.00</div>
+                      <div href="#" class="add-to-cart">
+                        <i class="bi bi-cart-plus"></i>
+                      </div>
+                    </div>
+                    <div class="dots-menu">
+                      <div class="nav-dots-item">
+                        <i class="bi bi-heart" title="Wishlist"></i>
+                        <i class="bi bi-arrow-repeat" title="Compare"></i>
+                      </div>
+                      <ion-icon name="add-outline"></ion-icon>
+                    </div>
+                  </a>
                   <a href="#" class="item">
                     <div class="category-name">Smartphone</div>
                     <div class="item-name">
@@ -730,11 +1011,18 @@
                     </div>
                   </a>
                 </div>
+              </div>
 
-                <div class="show-more d-flex justify-content-end">
-                  <a href="#">Show More +</a>
+              <div class="shop-widget-bar-bottom">
+                <div class="woocommerce-result-count">
+                  <!-- Showing 1-25 of 26 results -->
                 </div>
-              </section>
+
+                <div class="woocommerce-pagination-bottom">
+                  <!-- <div class="btn-pagination active border">1</div>
+                  <div class="btn-pagination border">2</div> -->
+                </div>
+              </div>
             </div>
           </div>
         </div>
