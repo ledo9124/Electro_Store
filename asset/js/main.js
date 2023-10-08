@@ -1,9 +1,11 @@
 //Toggle Dark Mode
 const btnDarkMode = document.querySelector(".btn-toggle-dark-mode input");
 
-btnDarkMode.onclick = function () {
-  document.body.classList.toggle("dark-mode-variables");
-};
+if (btnDarkMode) {
+  btnDarkMode.onclick = function () {
+    document.body.classList.toggle("dark-mode-variables");
+  };
+}
 
 //Slide Show
 const slideShow = document.querySelector(".slide-show .list-items");
@@ -123,22 +125,18 @@ nextPverItem(
   ".home-body .home-product.id2 .list-products .item"
 );
 
-nextPverItem(
-  ".home-body .home-product.id3 .btn-next-pver button",
-  ".home-body .home-product.id3 .list-products",
-  ".home-body .home-product.id3 .list-products .item"
-);
-
 // While scroll web
-const header = document.querySelector("header");
+const header = document.querySelector("#wapper header");
 
-document.onscroll = function () {
-  if (window.scrollY > 250) {
-    header.classList.add("toFixed");
-  } else {
-    header.classList.remove("toFixed");
-  }
-};
+if (header) {
+  document.onscroll = function () {
+    if (window.scrollY > 250) {
+      header.classList.add("toFixed");
+    } else {
+      header.classList.remove("toFixed");
+    }
+  };
+}
 
 // Shop page view list product
 const shopPageListProducts = document.querySelectorAll(
@@ -199,20 +197,20 @@ if (shopPageListProducts.length > 0) {
   woocommerceBtnNextPver[0].onclick = function () {
     currentActive--;
     if (currentActive < 0) {
-      currentActive = Math.ceil(countTable)-1;
+      currentActive = Math.ceil(countTable) - 1;
     }
     reloadProduct();
   };
 
   woocommerceBtnNextPver[1].onclick = function () {
     currentActive++;
-    if (currentActive > Math.ceil(countTable)-1) {
+    if (currentActive > Math.ceil(countTable) - 1) {
       currentActive = 0;
     }
     reloadProduct();
   };
 
-  woocommercePaginationBottomBtn.forEach((btn , index) => {
+  woocommercePaginationBottomBtn.forEach((btn, index) => {
     btn.onclick = function () {
       currentActive = index;
       reloadProduct();
@@ -224,16 +222,19 @@ if (shopPageListProducts.length > 0) {
       countTable
     )}`;
 
-    let woocommercePaginationBottomBtnActive = document.querySelector(
-      ".shop-page .woocommerce-pagination-bottom .btn-pagination.active"
-    ).classList.remove('active');
-    woocommercePaginationBottomBtn[currentActive].classList.add('active');
+    let woocommercePaginationBottomBtnActive = document
+      .querySelector(
+        ".shop-page .woocommerce-pagination-bottom .btn-pagination.active"
+      )
+      .classList.remove("active");
+    woocommercePaginationBottomBtn[currentActive].classList.add("active");
 
     shopPageListProducts.forEach((item, index) => {
       item.style.display = "none";
-      if (index > currentActive * 20 -1 && index <= currentActive * 20 + 19) {
+      if (index > currentActive * 20 - 1 && index <= currentActive * 20 + 19) {
         item.style.display = "block";
-      };
+      }
     });
   }
 }
+
